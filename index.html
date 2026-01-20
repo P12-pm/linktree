@@ -898,7 +898,49 @@ body.mypopup-open {
     /* ... rest of your styles ... */
 }
     
-   
+   /* --- 5. TOGGLE BUTTONS (Centered & Responsive) --- */
+.toggle-container {
+    background: rgba(108, 106, 106, 0.5); /* Semi-transparent background */
+    border-radius: 50px;
+    padding: 4px;
+    display: flex;
+    justify-content: center; /* Centers buttons inside the bar */
+    margin: 0 auto 25px auto; /* Centers the bar on the page */
+    width: fit-content;       /* Shrinks bar to fit buttons */
+    min-width: 220px;         /* Prevents it from getting too tiny */
+}
+
+.toggle-btn {
+    flex: 1;                  /* Buttons take equal space */
+    padding: 12px 35px;       /* Comfortable size for tapping */
+    border: none;
+    background: transparent;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    white-space: nowrap;      /* Prevents text from breaking */
+}
+
+.toggle-btn.active {
+    background: #ffffff;
+    color: #000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Mobile Specific Adjustment */
+@media (max-width: 480px) {
+    .toggle-container {
+        width: 85%;           /* Bar takes more width on small phones */
+        max-width: 300px;
+    }
+    .toggle-btn {
+        padding: 10px 20px;   /* Slightly smaller padding for narrow screens */
+        font-size: 14px;
+    }
+}
 </style>
 
 <div class="modal-overlay" id="productModal">
@@ -997,8 +1039,8 @@ body.mypopup-open {
 
         <!-- Toggle Controls -->
         <div class="toggle-container">
-            <button class="toggle-btn active" id="btn-links" onclick="switchTab('links')">Links</button>
-            <button class="toggle-btn inactive" id="btn-shop" onclick="switchTab('shop')">Shop</button>
+          <button class="toggle-btn active" id="btn-links" onclick="switchTab('links')">Links</button>
+         <button class="toggle-btn" id="btn-shop" onclick="switchTab('shop')">Shop</button>
         </div>
 
         <!-- LINKS VIEW (Default Active) -->
@@ -1102,7 +1144,7 @@ body.mypopup-open {
 
         <!-- SHOP VIEW -->
         <div id="shop-view" class="view-section">
-            <a href="javascript:void(0)" class="shop-card" onclick="openProductModal('2 in 1 Gift Set', 'img/33aa2691-fe30-4d32-90ee-c311fd4dfed4_image.png', 'https://giftana.com/collections/2-in-1-gift-sets')">>
+            <a href="javascript:void(0)" class="shop-card" onclick="openProductModal('2 in 1 Gift Set', 'img/33aa2691-fe30-4d32-90ee-c311fd4dfed4_image.png', 'https://giftana.com/collections/2-in-1-gift-sets')">
              <div class="shop-img-container">
              <img src="img/33aa2691-fe30-4d32-90ee-c311fd4dfed4_image.png" class="shop-img" alt="Desk Set">
              </div>
