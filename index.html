@@ -942,7 +942,8 @@ body.mypopup-open {
     }
 }
 </style>
-
+</head>
+<body>
 <div class="modal-overlay" id="productModal">
     <div class="modal-card">
         <button class="close-modal-btn" onclick="closeProductModal()">
@@ -960,10 +961,6 @@ body.mypopup-open {
         </a>
     </div>
 </div>
-    </style>
-</head>
-<body>
-
     <!-- POPUP MODAL -->
     <div class="modal-overlay" id="customModal">
         <div class="modal-card">
@@ -994,8 +991,8 @@ body.mypopup-open {
             </div>
 
             <div class="modal-links">
-                <a class="modal-link">Explore more Linktrees</a>
-                <a class="modal-link">Learn more about Linktree</a>
+                <a href="https://linktr.ee/discover/trending/?utm_source=linktree&utm_medium=profile&utm_campaign=signup_intent_banner&utm_content=giftanacorporategifting&signup_intent=explore_more" class="modal-link">Explore more Linktrees</a>
+                <a href="https://linktr.ee/?utm_source=linktree&utm_medium=profile&utm_campaign=signup_intent_banner&utm_content=giftanacorporategifting&signup_intent=learn_more" class="modal-link">Learn more about Linktree</a>
             </div>
 
             <button class="signup-free-btn">Sign up free</button>
@@ -1248,7 +1245,7 @@ body.mypopup-open {
 </div>
         
 
-        <a href="#" class="join-btn">Join giftanacorporategifting on Linktree</a>
+        <a href="javascript:void(0)" class="join-btn" onclick="openModal()">Join giftanacorporategifting on Linktree</a>
 
         <footer>
             <div class="footer-links">
